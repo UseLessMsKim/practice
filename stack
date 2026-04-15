@@ -1,0 +1,28 @@
+class Stack {
+private:
+    int stack[10000];
+    int topIndex;
+public:
+    Stack() {
+        topIndex = -1;
+    }
+    void push(int x) {
+        stack[++topIndex] = x;
+    }
+    int pop() {
+        if (topIndex == -1) return -1;
+        return stack[topIndex--];
+    }
+    int size() {
+        return topIndex + 1;
+    }
+    int empty() {
+        if (topIndex == -1) return 1;
+        return 0;
+    }
+    int top() {
+        if (topIndex == -1) return -1;
+        return stack[topIndex];
+    }
+};
+// Stack의 기본적인 구현 방법
